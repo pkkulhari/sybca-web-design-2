@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">  
+  <title>Executing a Function on Hover Event in jQuery</title>
+
+  <style>
+    p{
+      padding: 20px;
+      font: 20px sans-serif;
+      background: khaki;
+    }
+  </style>
+</head>
+<body>
+  <p>Hover on me and I'll disappear.</p>
+  <p>Hover on me and I'll disappear.</p>
+  <p>Hover on me and I'll disappear.</p>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("p").hover(function(){
+          $(this).slideUp();
+      });
+    });
+  </script>
+</body>
+</html>

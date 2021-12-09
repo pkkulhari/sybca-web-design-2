@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch JSON Data</title>
+</head>
+<body>
+  <h1>Cricketer Details</h1>
+		
+  <table class="src">
+     <tr>
+       <th>Name</th>
+       <th>Country</th>
+      </tr>
+     <tr>
+       <td>
+         <div id="Name"></div>
+        </td>
+     <td>
+       <div id="Country"></div>
+      </td></tr>
+  </table>
+
+  <button type="button" onclick = "loadJSON()">Fetch Details</button>  
+
+  <script>
+    function loadJSON() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var jsonObj = JSON.parse(xhttp.responseText);
+          document.getElementById("Name").innerHTML = jsonObj.name;
+          document.getElementById("Country").innerHTML = jsonObj.country;
+        }
+      };
+      xhttp.open("GET", "cricketer.json", true);
+      xhttp.send();
+    }
+  </script>
+</body>
+</html>

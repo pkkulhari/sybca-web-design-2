@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">  
+  <title>jQuery Set Form Fields Values</title>
+
+  <style>
+    p{
+      padding: 10px;
+      background: lightgreen;
+      display: none;
+    }
+    div{
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <button type="button">Discovery</button>
+  <button type="button">Intelligence</button>
+  <button type="button">Future</button>
+  <p><strong>Note:</strong> 
+    Click the above buttons to set the value of following input box.
+  </p>
+  <br><br>
+  <input type="text">    
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+          var text = $(this).text();
+          $('input[type="text"]').val(text);
+      });
+    });
+  </script>
+</body>
+</html>

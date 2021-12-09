@@ -1,0 +1,42 @@
+[
+  {
+    "position": "1",
+    "name": "Mercury",
+    "image": "http://space-facts.com/mercury-transparent.png",
+    "velocity": "47",
+    "distance": "58",
+    "description": "Mercury is the closest planet to the Sun"
+  },
+  {
+    "position": "2",
+    "name": "Venus",
+    "image": "http://space-facts.com/venus-transparent.png",
+    "velocity": "35",
+    "distance": "108",
+    "description": "Venus is the second planet from the Sun"
+  },
+  {
+    "position": "3",
+    "name": "Earth",
+    "image": "http://space-facts.com/earth-transparent.png",
+    "velocity": "29",
+    "distance": "149",
+    "description": "Earth is the third planet from the Sun"
+  },
+  {
+    "position": "4",
+    "name": "Mars",
+    "image": "http://space-facts.com/mars-transparent.png",
+    "velocity": "24",
+    "distance": "227",
+    "description": "Mars is the fourth planet from the Sun"
+  },
+  {
+    "position": "5",
+    "name": "Jupiter",
+    "image": "http://space-facts.com/jupiter-transparent.png",
+    "velocity": "13",
+    "distance": "778",
+    "description": "The planet Jupiter is the fifth planet out from the Sun"
+  }
+]

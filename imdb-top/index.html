@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>IMDb Rating</title>
+
+    <style>
+      #moviesTable tr th,
+      #moviesTable tr td {
+        padding: 5px 10px;
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>IMDb Top Movies</h1>
+
+    <table id="moviesTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <br />
+
+    <button type="button" onclick="fetchData()">Fetch Data</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function fetchData() {
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            setData(xhr.response);
+          }
+        };
+        xhr.open("GET", "http://localhost:8000/movies");
+        xhr.send();
+      }
+
+      function setData(data) {
+        const movies = JSON.parse(data);
+
+        $.each(movies, function (key, movie) {
+          $(`<tr><td>${movie.name}</td><td>${movie.rating}</td></tr>`).appendTo(
+            "#moviesTable tbody"
+          );
+        });
+      }
+    </script>
+  </body>
+</html>
